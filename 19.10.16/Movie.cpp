@@ -6,7 +6,7 @@ void Movie::read(std::istream& file)
     file.getline(buf,100,'~');
     title=buf;
     file>>length;
-    while(file.getline(buf,100))
+    while(file.getline(buf,100,'~'))
     {
         int tmp_age;
         file>>tmp_age;
