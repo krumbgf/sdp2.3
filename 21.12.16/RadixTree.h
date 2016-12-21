@@ -33,10 +33,10 @@ class RadixTree
 	public:
 		RadixTree();
 		~RadixTree();
-		void insert(std::string key, V value);
-		void remove(std::string key);
-		bool find(std::string key) const;
-		V& operator[](std::string key);
+		void insert(const std::string& key, V value);
+		void remove(const std::string& key);
+		bool find(const std::string& key) const;
+		V& operator[](const std::string& key);
 		void print() const;
 };
 
@@ -87,7 +87,7 @@ Node<V>* RadixTree<V>::insertNode(Node<V>* rootNode, std::string key, int& offse
 }
 
 template<typename V>
-void RadixTree<V>::insert(std::string key, V value)
+void RadixTree<V>::insert(const std::string& key, V value)
 {
 	if (!root)
 	{
@@ -153,7 +153,7 @@ void RadixTree<V>::remove(Node<V>* rootNode, std::string key)
 }
 
 template<typename V>
-void RadixTree<V>::remove(std::string key)
+void RadixTree<V>::remove(const std::string& key)
 {
 	remove(root, key);
 }
@@ -177,7 +177,7 @@ Node<V>* RadixTree<V>::find(Node<V>* rootNode, std::string key) const
 }
 
 template<typename V>
-bool RadixTree<V>::find(std::string key) const
+bool RadixTree<V>::find(const std::string& key) const
 {
 	if(find(root,key)==nullptr)
 		return false;
@@ -185,7 +185,7 @@ bool RadixTree<V>::find(std::string key) const
 }
 
 template<typename V>
-V& RadixTree<V>::operator[](std::string key)
+V& RadixTree<V>::operator[](const std::string& key)
 {
 	return find(root, key)->strVal;
 }
