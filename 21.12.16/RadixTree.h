@@ -115,7 +115,7 @@ void RadixTree<V>::insert(const std::string& key, V value)
 			//insert leaf
 		else
 		{
-			if (rootNode != root && (rootNode->children.size() == 0 || rootNode->children[0]->str != ""))
+			if (rootNode->children.size() == 0)
 			{
 				rootNode->children.push_back(new Node<V>(std::string(""), rootNode->strVal));
 			}
