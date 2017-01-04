@@ -1,0 +1,10 @@
+Sofia Pernik 20
+Sofia Pancharevo 10
+Pancharevo Samokov 50
+Sofia Plovdiv 150
+Pernik Dupnica 35
+Dupnica Samokov 40
+Samokov Borovec 10
+Borovec Kostenec 50
+Kostenec Plovdiv 100
+Burgas Plovdiv 210
